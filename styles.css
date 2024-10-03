@@ -4,13 +4,16 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 :root {
     --main_color : #caff09;
     --secondary_color:#686767;
     --text_color:#ffffff;
-    --big_text: 2rem;
+    --text_color_linear:linear-gradient(90deg,#caff09 70%,#059100 );
+    --text_color_linear2:linear-gradient(90deg,#059100 ,#044702 );
+    --big_text: 3.2rem;
     --p_size : 1.2rem;
 }
 
@@ -23,6 +26,7 @@ body {
 .flex {
     display: flex;
 }
+
 a {
     color: var(--text_color);
 }
@@ -53,10 +57,6 @@ a {
     vertical-align: -18%;
 }
 
-.logo img {
-    max-width: 50px;
-    height: auto;
-}
 .navlist {
     gap: 3vw;
     align-items: center;
@@ -86,17 +86,84 @@ a {
     box-shadow: 1px 1px 1px 1px #ffffff , -1px -1px 1px 1px #ffffff;
     color: #686767;
 }
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
 .hero {
-    height: 100vh;
+    flex-direction: column;
+    height: 95vh;
     justify-content: center;
     align-items: center;
+    text-align: start;
     background: url(./images/town-6843799_1920.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    color: var(--text_color);
+    gap: 50px;
+
 }
+.hero-text {
+    padding: 0 40% 0 10%;
+}
+
+.hero h1 {
+    font-size: var(--big_text);
+}
+
+.hero h1 span {
+    background: var(--text_color_linear);
+    font-weight: 800;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: var(--p_size);
+    transform: translateY(15px);
+}
+
+.hero i {
+    align-self: center;
+    font-size: 5em;
+    transform: translateY(20vh);
+    color: var(--main_color);
+    animation:  arrow 1s ease infinite;
+}
+
+@keyframes arrow {
+    0% { transform: translateY(0);
+    }
+    50% { transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.benefits {
+    padding: 30px 0;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10vh 30px;
+    text-align: center;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.feature {
+    width: 250px;
+    place-self: center;
+    text-align: center;
+}
+
+.feature i {
+    font-size: var(--big_text);
+    background: var(--text_color_linear2);
+    background-clip: text;
+    color: transparent;
+}
+
