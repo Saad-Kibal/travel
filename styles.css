@@ -102,6 +102,45 @@ a {
     box-shadow: 1px 1px 1px 1px #ffffff , -1px -1px 1px 1px #ffffff;
     color: #686767;
 }
+.navbar-small {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 350px;
+    z-index: 999999;
+    background-color: rgba(32, 32, 32, 0.637);
+    opacity: 90%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 20px 30px;
+    display: none;
+    transition:  translate 1s ease-in-out;
+    transform: translateX(100px);
+}
+
+.navbar-small:active {
+    transform: translateX(-100px);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar-small ul {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.contact-small {
+    padding: 5px 20px;
+    background-color: #7a9b05;
+    border: 2px solid #caff09;
+    color: #ffffff;
+    border-radius: 100vw;
+    transition: 0.2s linear;
+}
 
 .hero {
     flex-direction: column;
@@ -344,45 +383,6 @@ footer {
         justify-content: space-around;
     }
     
-    .navbar-small {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 50vh;
-        width: 350px;
-        z-index: 999999;
-        background-color: rgba(32, 32, 32, 0.637);
-        opacity: 90%;
-        backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 70px;
-        padding: 20px 30px;
-        display: none;
-        transition:  translate 1s ease-in-out;
-        transform: translateX(100px);
-    }
-
-    .navbar-small:active {
-        transform: translateX(-100px);
-        transition: 0.5s ease-in-out;
-    }
-    
-    .navbar-small ul {
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-    }
-
-    .contact-small {
-        padding: 5px 20px;
-        background-color: #7a9b05;
-        border: 2px solid #caff09;
-        color: #ffffff;
-        border-radius: 100vw;
-        transition: 0.2s linear;
-    }
 
     footer {
         font-size: 0.8rem;
