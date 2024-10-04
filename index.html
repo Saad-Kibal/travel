@@ -21,6 +21,19 @@
             </ul>
         </nav>
         <a class="contact" href="#">Contact Us</a>
+        <i class="fas fa-bars" onclick=showSidebar()></i>
+        </div>
+        <div class="navbar-small">
+            <nav>
+                <ul class="navlist-small">
+                    <i onclick=hideSidebar() class="fas fa-times"></i>
+                    <li><a href="#">Benefits</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </nav>
+            <a class="contact-small" href="#">Contact Us</a>
+            </div>
         </div>
     </header>
     <main class="grid main-content">
@@ -130,9 +143,59 @@
                     <div><h3>explorer</h3>  <p>"I booked a trip months in advance, but they canceled it a week before we were supposed to leave. They offered a full refund, but it was too late to find another trip."</p></div>
                 </div>
             </div>
-
         </section>
     </main>
-    
+    <footer>
+        <div class=" col footer-column1">
+             <div class="logo">
+                 <p>Traveler</p>
+             </div>
+             <p class="first">Contact Us</p>
+             <p>1234 Somewhere in the world i dont know 1234-8878787</p>
+             <div class="Email">
+                <input type="email">
+                <button>Email Us</button>
+             </div>
+             <p>@2024 something all rights reserved (and the sources of the images) </p>
+        </div>
+        <div class=" col footer-column2">
+            <p class="first">also check us out on</p>
+            <div class="socials">
+                 <a href=""><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
+                 <a href=""><i class="fa-brands fa-x-twitter"></i><span>Twitter/X</span></a>
+                 <a href=""><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                 <a href=""><i class="fa-brands fa-discord"></i><span>Discord</span></a>
+                 <a href=""><i class="fa-brands fa-youtube"></i><span>Youtube</span></a>
+                 <a href=""><i class="fa-solid fa-question"></i><span>???</span></a>
+            </div>
+        </div>
+        <div class=" col footer-column3">
+            <p class="first">Legal</p>
+            <div>
+                <p>privacy policy</p>
+                <p>terms of services</p>
+                <p>give us money</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("scroll" , () => {
+            const header = document.querySelector("header");
+            if (window.scrollY > 1) {
+                header.classList.add("scroll");
+            }
+            else {
+                header.classList.remove("scroll");
+            }
+        });
+        function showSidebar() {
+            const sidebar = document.querySelector(".navbar-small")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector(".navbar-small")
+            sidebar.style.display = "none"
+        }
+    </script>
 </body>
 </html>

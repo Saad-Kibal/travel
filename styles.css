@@ -19,6 +19,7 @@
 
 body {
     font-family: "Exo 2" , sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -39,7 +40,14 @@ a {
     background-color: transparent;
     position: fixed;
     border-bottom: 1px groove #686767;
+    transition: background-color 0.4s ease-in-out ;
 }
+
+.header.scroll {
+    background-color: #202020;
+    z-index: 100;
+}
+
 
 .logo {
     font-size: 1.5rem;
@@ -57,6 +65,12 @@ a {
     vertical-align: -18%;
 }
 
+.header i {
+    font-size: 1.2em;
+    color: #ffffff;
+    display: none;
+}
+
 .navlist {
     gap: 3vw;
     align-items: center;
@@ -64,6 +78,7 @@ a {
     float: left;
     transition: transform 0.1s linear;
 }
+
 
 .navlist li:hover {
     transform: scale(1.2);
@@ -85,6 +100,35 @@ a {
     background-color: #caff09;
     box-shadow: 1px 1px 1px 1px #ffffff , -1px -1px 1px 1px #ffffff;
     color: #686767;
+}
+
+.navbar-small {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 350px;
+    z-index: 9999;
+    background-color: rgba(32, 32, 32, 0.637);
+    opacity: 90%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 0;
+    display: none;
+    transition: 0.3 linear;
+}
+
+.navbar-small ul {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.vavbar-small li {
+    width: 100%;
 }
 
 .hero {
@@ -176,6 +220,7 @@ a {
     flex-direction: column;
     gap: 50px;
     text-align: center;
+    padding: 20vh 0;
 }
 
 .places {
@@ -231,7 +276,12 @@ a {
 
 .reviews {
     flex-direction: column;
-    gap: 20vh;
+    gap: 10vh;
+    padding: 10% 0;
+}
+.reviews h5 {
+    font-size: 2em;
+    text-align: center;
 }
 
 
@@ -244,7 +294,7 @@ a {
 }
 
 .review {
-    background-color: #f5f5f5;
+    background-color: rgb(184, 184, 184 , 5%);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px grey , -1px -1px 5px grey ;
@@ -259,5 +309,78 @@ a {
     width: 30%;
     border-radius: 100vh;
 }
+
+footer {
+    background-color: #202020;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px );
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 50px;
+    gap: 70px;
+}
+
+
+.col {
+    justify-self: center;
+}
+
+.footer-column1 .logo {
+    justify-self: flex-start;
+    width: fit-content;
+}
+
+.first {
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-bottom: 2vh;
+}
+
+.footer-column1 input,button {
+    padding: 10px;
+}
+
+.footer-column2 .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: larger;
+    align-items: center;
+}
+
+@media  screen and (max-width:550px) {
+    .header i {
+        display: block;
+
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .navlist , .contact {
+        display: none;
+    }
+
+    .hero-text {
+        padding: 0 10px 0 10px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+      
+    .hero p {
+        font-size: 1.1em;
+
+    }
+    
+    .hero i {
+        font-size: 3em;
+    }
+    
+}
+
+
 
 
