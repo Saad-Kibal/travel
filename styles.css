@@ -413,4 +413,6 @@ footer {
         font-size: 0.8rem;
         gap: 20px;
     }
+    .benefits-list , review-list {
+        grid-column-template : 1fr;
 }
