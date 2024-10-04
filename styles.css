@@ -107,7 +107,7 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    height: 50vh;
+    height: 60vh;
     width: 350px;
     z-index: 999999;
     background-color: rgba(32, 32, 32, 0.637);
@@ -116,7 +116,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 70px;
+    justify-content: space-between;
     padding: 20px 30px;
     display: none;
     transition:  translate 1s ease-in-out;
@@ -131,7 +131,7 @@ a {
 .navbar-small ul {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 5vh;
 }
 
 .contact-small {
