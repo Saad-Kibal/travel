@@ -32,6 +32,8 @@ a {
     color: var(--text_color);
 }
 
+/*header section*/
+
 .header {
     justify-content: space-evenly;
     align-items: center;
@@ -142,6 +144,7 @@ a {
     border-radius: 100vw;
     transition: 0.2s linear;
 }
+/*hero section*/
 
 .hero {
     flex-direction: column;
@@ -194,6 +197,7 @@ a {
         transform: translateY(0);
     }
 }
+/*benefits section*/
 
 .benefits {
     padding: 10vh 30px;
@@ -286,6 +290,8 @@ a {
     color: transparent;
 }
 
+/*reviews section*/
+
 .reviews {
     flex-direction: column;
     gap: 10vh;
@@ -321,6 +327,8 @@ a {
     width: 30%;
     border-radius: 100vh;
 }
+
+/*footer section*/
 
 footer {
     background-color: #202020;
@@ -405,8 +413,4 @@ footer {
         font-size: 0.8rem;
         gap: 20px;
     }
-
-
-
-
 }
