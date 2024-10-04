@@ -40,12 +40,12 @@ a {
     background-color: transparent;
     position: fixed;
     border-bottom: 1px groove #686767;
-    transition: background-color 0.4s ease-in-out ;
+    z-index: 100000000;
 }
 
 .header.scroll {
     background-color: #202020;
-    z-index: 100;
+    z-index: 100000;
 }
 
 
@@ -96,39 +96,11 @@ a {
     transition: 0.2s linear;
 }
 
+
 .contact:hover {
     background-color: #caff09;
     box-shadow: 1px 1px 1px 1px #ffffff , -1px -1px 1px 1px #ffffff;
     color: #686767;
-}
-
-.navbar-small {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 50vh;
-    width: 350px;
-    z-index: 9999;
-    background-color: rgba(32, 32, 32, 0.637);
-    opacity: 90%;
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
-    padding: 20px 0;
-    display: none;
-    transition: 0.3 linear;
-}
-
-.navbar-small ul {
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-}
-
-.vavbar-small li {
-    width: 100%;
 }
 
 .hero {
@@ -352,35 +324,65 @@ footer {
 @media  screen and (max-width:550px) {
     .header i {
         display: block;
+        transition: 0.4s ease;
+    }
 
+    .header i:active {
+        transition: 0.4s ease;
+    }
+    
+    .hideonmobo {
+        display: none;
+    }
+
+    ul a {
+        color: #caff09;
+        font-size: 1.2em;
     }
 
     .header {
         justify-content: space-around;
     }
-
-    .navlist , .contact {
+    
+    .navbar-small {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 50vh;
+        width: 350px;
+        z-index: 999999;
+        background-color: rgba(32, 32, 32, 0.637);
+        opacity: 90%;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 70px;
+        padding: 20px 30px;
         display: none;
+        transition:  translate 1s ease-in-out;
+        transform: translateX(100px);
     }
 
-    .hero-text {
-        padding: 0 10px 0 10px;
+    .navbar-small:active {
+        transform: translateX(-100px);
+        transition: 0.5s ease-in-out;
     }
-    .hero h1 {
-        font-size: 2em;
+    
+    .navbar-small ul {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
     }
-      
-    .hero p {
-        font-size: 1.1em;
 
+    .contact-small {
+        padding: 5px 20px;
+        background-color: #7a9b05;
+        border: 2px solid #caff09;
+        color: #ffffff;
+        border-radius: 100vw;
+        transition: 0.2s linear;
     }
-    
-    .hero i {
-        font-size: 3em;
-    }
-    
+
+
 }
-
-
-
-
