@@ -229,4 +229,35 @@ a {
     color: transparent;
 }
 
+.reviews {
+    flex-direction: column;
+    gap: 20vh;
+}
+
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 300px);
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.review {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px grey , -1px -1px 5px grey ;
+    transition: 0.2s linear;
+}
+
+.review:hover {
+    transform: translateY(-7px);
+}
+
+.review img {
+    width: 30%;
+    border-radius: 100vh;
+}
+
 
